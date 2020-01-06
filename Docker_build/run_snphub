@@ -48,8 +48,8 @@ else:
     else:
     	subprocess.call('''rm -f /snphub/advanced_config.R''', shell=True) 
         subprocess.call('''mv /snphub/advanced_config_O.R /snphub/advanced_config.R''', shell=True) 
-        subprocess.call('''rm -f /snphub/setup_config.R''', shell=True)
-        subprocess.call('''cp /snphub4docker/Docker_build/setup_config.R /snphub/setup_config.R''', shell=True) 
+        subprocess.call('''rm -f /snphub/setup.conf''', shell=True)
+        subprocess.call('''cp /snphub4docker/Docker_build/setup_config.R /snphub/setup.conf''', shell=True) 
         subprocess.call('''R -e "shiny::runApp('/snphub', port=5000, host='0.0.0.0')" ''', shell=True) 
     #
 # 

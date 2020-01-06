@@ -1,6 +1,6 @@
 DIR <- dirname(substring(commandArgs(trailingOnly = FALSE)[grep("--file=", commandArgs(trailingOnly = FALSE))], 8))
 
-source(paste(DIR, "/../setup_config.R", sep=""))
+source(paste(DIR, "/../setup.conf", sep=""))
 source(paste(DIR, "/advanced_config.R", sep=""))
 source(paste(DIR, "/setup_scripts/envir_check.R", sep=""))
 source(paste(DIR, "/setup_scripts/file_check.R", sep=""))

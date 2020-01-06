@@ -1,4 +1,3 @@
-path_vcfolder <- paste(path_datafolder, "/", name_vcf_folder)
 # filepaths
 path_fa_index <- paste(path_datafolder, "/", name_fasta, ".fai", sep="")
 path_geneindex <- paste(path_datafolder, "/", "geneinfo.txt", sep="")
