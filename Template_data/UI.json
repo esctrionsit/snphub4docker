@@ -1,0 +1,39 @@
+{
+    "VarTable": {
+        "Samples1": "List of samples, must have variant",
+        "Samples2": "List of samples, must NOT have variant",
+        "Samples3": "List of samples, independent of having variant",
+        "Region": "",
+        "Flanking": "0"
+    },
+    "Heatmap": {
+        "Region": "",
+        "Flanking": "0",
+        "Groups": ""
+    },
+    "HapNet": {
+        "Region": "",
+        "Flanking": "0",
+        "Groups": ""
+    },
+    "PhyloTree": {
+        "Region": "",
+        "Flanking": "0",
+        "Groups": ""
+    },
+    "HapMap": {
+        "Samples": "",
+        "Region": ""
+    },
+    "SnpFreq": {
+        "Samples": "",
+        "Region": "",
+        "Flanking": "0",
+        "tracks": "0"
+    },
+    "SeqMaker": {
+        "Samples": "",
+        "Region": ""
+    }
+}
+

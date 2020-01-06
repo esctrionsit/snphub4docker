@@ -1,0 +1,107 @@
+#!/usr/bin/python
+#!/usr/bin/env python
+
+"""
+MIT License
+
+Copyright (c) 2017-2020. SnpHub developers.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+"""
+
+import sys, os
+
+#os.system(sys.argv[0])
+
+#print sys.argv[0]
+#print sys.argv[1]
+#print sys.argv[-1]
+DIR=os.path.dirname(sys.argv[0])
+#print DIR
+
+import subprocess
+
+#subprocess.call(["ls", "-l", "/etc/resolv.conf"])
+
+argv_len = len(sys.argv)
+
+def PrintVersion() :
+    print("Version:  1.0.0")
+    print("Updated on: Jun. 4th, 2020")
+#
+
+if (argv_len) == 1  or sys.argv[1] in ["-h", "-H", "--help"]:
+    print("Program : snphub (Tools for visualizing re-seq data)")
+    PrintVersion()
+    print("Usage:    snphub <command> [options]")
+    print("Commands:")
+    print("  -- SnpHub on docker")
+    print("     create      + to create a SnpHub Docker image or container")
+    print("     list          to list all the containers created")
+    print("     start         start a specific container")
+    print("     stop          stop a specific container")
+    print("     kill          kill (force stop) a specific container")
+    print("     rm            delete a specific container")
+    print("  -- SnpHub data pre-processing")
+    print("     init          pre-processing the user provided re-seq data")
+    print("Note: ")
+    print("  Commands contain sub-commands are marked with \"+\" ")
+    print("  Generally any operate on Docker needs root authority.")
+    print("  We recomand to use root account when using commands related to Docker.")
+    print("  Or using \"sudo snphub <command> [options]\".")
+    print("Authors:")
+    print("  Wang, Wenxi; wangwenxi20@gmail.com")
+    print("  Wang, Zihao; zhwang@cau.edu.cn")
+    print("")
+else :
+    code1 = sys.argv[1]
+    # -- File manipulation
+    if code1 == "create" :
+        if (argv_len) == 2 or sys.argv[2] in ["-h", "-H", "--help"]:
+            print("Usage:    snphub create <command> [options]")
+            PrintVersion()
+            print("Commands:")
+            print("     image        build a SnpHub docker image (only need run once generally)")
+            print("     container    create a SnpHub docker container form SnpHub docker image")
+        else :
+            code2 = sys.argv[2]
+            if code2 == "image" :
+                subprocess.call(["python"] + [DIR + "/scripts/image.py"]+ sys.argv[3:])
+            elif code2 == "container" :
+                subprocess.call(["python"] + [DIR + "/scripts/container.py"]+ sys.argv[3:])
+            else :
+                print("Wrong parameter. Enter \"snphub creat -h\" for more information.")
+            #
+        #
+    elif code1 == "list" :
+        subprocess.call(["python"] + [DIR + "/scripts/list.py"]+ sys.argv[2:])
+    elif code1 == "start" :
+        subprocess.call(["python"] + [DIR + "/scripts/start.py"]+ sys.argv[2:]) 
+    elif code1 == "stop" :
+        subprocess.call(["python"] + [DIR + "/scripts/stop.py"]+ sys.argv[2:]) 
+    elif code1 == "kill" :
+        subprocess.call(["python"] + [DIR + "/scripts/kill.py"]+ sys.argv[2:]) 
+    elif code1 == "rm" :
+        subprocess.call(["python"] + [DIR + "/scripts/rm.py"]+ sys.argv[2:]) 
+    elif code1 == "init" :
+        subprocess.call(["python"] + [DIR + "/scripts/init.py"]+ sys.argv[2:]) 
+    else :
+        print("Wrong parameter. Enter \"snphub -h\" for help.")
+    #
+#

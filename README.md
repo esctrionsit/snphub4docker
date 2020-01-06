@@ -1,2 +1,5 @@
 # snphub4docker
-Little changes for docker
+
+Docker-encapsulated version of `SnpHub`. ([Main Repo](https://github.com/esctrionsit/snphub))
+
+[Document Link](https://esctrionsit.github.io/snphub_tutorial/)
