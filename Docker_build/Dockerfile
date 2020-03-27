@@ -173,6 +173,8 @@ RUN R -e "install.packages('ggplot2', repos='https://cran.rstudio.com/')"
 
 RUN R -e "install.packages('ggmap', repos='https://cran.rstudio.com/')"
 
+RUN R -e "install.packages('crayon', repos='https://cran.rstudio.com/')"
+
 RUN R -e "install.packages('rjson', repos='https://cran.rstudio.com/')"
 
 RUN R -e "install.packages('udunits2', configure.args='--with-udunits2-include=/usr/include/udunits2/', repos='https://cran.rstudio.com/')"
