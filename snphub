@@ -63,7 +63,7 @@ if (argv_len) == 1  or sys.argv[1] in ["-h", "-H", "--help"]:
     print("Note: ")
     print("  Commands contain sub-commands are marked with \"+\" ")
     print("  Generally any operate on Docker needs root authority.")
-    print("  We recomand to use root account when using commands related to Docker.")
+    print("  We recommend to use root account when using commands related to Docker.")
     print("  Or using \"sudo snphub <command> [options]\".")
     print("Authors:")
     print("  Wang, Wenxi; wangwenxi20@gmail.com")
