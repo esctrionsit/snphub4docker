@@ -209,4 +209,4 @@ RUN /bin/bash -c 'chmod +x /run_snphub'
 
 WORKDIR /
 
-# RUN rm -rf tmpdownloads
+RUN rm -rf tmpdownloads
