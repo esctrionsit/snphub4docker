@@ -114,7 +114,7 @@ RUN tar -zxvf seqkit_linux_amd64.tar.gz
 
 RUN cp seqkit /usr/local/bin/
 
-# PROJ.4
+# PROJ
 
 WORKDIR /tmpdownloads/
 
@@ -148,7 +148,7 @@ RUN echo "/usr/local/lib" > /etc/ld.so.conf.d/libgeos-x86_64.conf
 
 RUN ldconfig
 
-# GDOL
+# GDAL
 
 WORKDIR /tmpdownloads/
 
@@ -183,7 +183,13 @@ RUN R -e "install.packages('RPostgreSQL', dependencies=TRUE, repos='https://cran
 
 RUN R -e "install.packages('pegas', repos='https://cran.rstudio.com/')"
 
-RUN R -e "install.packages('vcfR', repos='https://cran.rstudio.com/')"
+#RUN R -e "install.packages('vcfR', repos='https://cran.rstudio.com/')"
+
+RUN R -e "install.packages('memuse', repos='https://cran.rstudio.com/')"
+
+RUN R -e "install.packages('pinfsc50', repos='https://cran.rstudio.com/')"
+
+RUN R -e "install.packages("https://cran.r-project.org/src/contrib/Archive/vcfR/vcfR_1.9.0.tar.gz", repos=NULL, type="source")"
 
 RUN R -e "install.packages('DT', repos='https://cran.rstudio.com/')"
 
