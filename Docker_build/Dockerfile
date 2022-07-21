@@ -171,8 +171,6 @@ RUN R -e "install.packages('shiny', repos='https://cran.rstudio.com/')"
 
 RUN R -e "install.packages('ggplot2', repos='https://cran.rstudio.com/')"
 
-RUN R -e "install.packages('ggmap', repos='https://cran.rstudio.com/')"
-
 RUN R -e "install.packages('crayon', repos='https://cran.rstudio.com/')"
 
 # RUN R -e "install.packages('rjson', repos='https://cran.rstudio.com/')"
@@ -204,6 +202,8 @@ RUN R -e "install.packages('https://cran.r-project.org/src/contrib/Archive/vcfR/
 RUN R -e "install.packages('DT', repos='https://cran.rstudio.com/')"
 
 RUN R -e "install.packages('maps', repos='https://cran.rstudio.com/')"
+
+RUN R -e "install.packages('ggmap', repos='https://cran.rstudio.com/')"
 
 ##########################################################
 # Clone SnpHub
