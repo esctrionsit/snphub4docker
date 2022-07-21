@@ -181,9 +181,15 @@ RUN R -e "install.packages('udunits2', configure.args='--with-udunits2-include=/
 
 RUN R -e "install.packages('RPostgreSQL', dependencies=TRUE, repos='https://cran.rstudio.com/')"
 
-RUN R -e "install.packages('pegas', repos='https://cran.rstudio.com/')"
+RUN R -e "install.packages('ape', repos='https://cran.rstudio.com/')"
 
-#RUN R -e "install.packages('vcfR', repos='https://cran.rstudio.com/')"
+RUN R -e "install.packages('adegenet', repos='https://cran.rstudio.com/')"
+
+# RUN R -e "install.packages('pegas', repos='https://cran.rstudio.com/')"
+
+RUN R -e "install.packages('https://cran.r-project.org/src/contrib/Archive/pegas/pegas_0.11.tar.gz', repos=NULL, type='source')"
+
+# RUN R -e "install.packages('vcfR', repos='https://cran.rstudio.com/')"
 
 RUN R -e "install.packages('memuse', repos='https://cran.rstudio.com/')"
 
