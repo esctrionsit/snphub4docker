@@ -214,7 +214,7 @@ RUN git clone https://github.com/esctrionsit/snphub
 
 RUN git clone https://github.com/esctrionsit/snphub4docker
 
-RUN cp /snphub4docker/run_snphub /
+RUN cp /snphub4docker/Docker_build/run_snphub /
 
 RUN /bin/bash -c 'chmod +x /run_snphub'
 
