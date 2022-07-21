@@ -195,7 +195,7 @@ RUN R -e "install.packages('memuse', repos='https://cran.rstudio.com/')"
 
 RUN R -e "install.packages('pinfsc50', repos='https://cran.rstudio.com/')"
 
-RUN R -e "install.packages("https://cran.r-project.org/src/contrib/Archive/vcfR/vcfR_1.9.0.tar.gz", repos=NULL, type="source")"
+RUN R -e "install.packages('https://cran.r-project.org/src/contrib/Archive/vcfR/vcfR_1.9.0.tar.gz', repos=NULL, type='source')"
 
 RUN R -e "install.packages('DT', repos='https://cran.rstudio.com/')"
 
