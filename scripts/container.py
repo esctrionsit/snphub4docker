@@ -64,7 +64,7 @@ else:
         if mount:
             out_bytes = subprocess.call(" ".join(['docker', 'run', '-d', '-p', port+':5000', '-v', mount_path + ':/snphub_data', 'snphub_image', '''python /run_snphub''']), shell=True)
         else:
-            out_bytes = subprocess.call(" ".join(['docker', 'run', '-d', '-p', port+':5000', 'snphub_image', '''python /run_snphub sample" ''']), shell=True)
+            out_bytes = subprocess.call(" ".join(['docker', 'run', '-d', '-p', port+':5000', 'snphub_image', '''python /run_snphub sample ''']), shell=True)
     except:
         print("")
         print("Seems an error occured.")
