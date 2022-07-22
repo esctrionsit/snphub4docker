@@ -169,7 +169,25 @@ RUN ldconfig
 
 RUN R -e "install.packages('shiny', repos='https://cran.rstudio.com/')"
 
-RUN R -e "install.packages('ggplot2', repos='https://cran.rstudio.com/')"
+# RUN R -e "install.packages('ggplot2', repos='https://cran.rstudio.com/')"
+
+RUN R -e "install.packages('digest', repos='https://cran.rstudio.com/')"
+
+RUN R -e "install.packages('glue', repos='https://cran.rstudio.com/')"
+
+RUN R -e "install.packages('gtable', repos='https://cran.rstudio.com/')"
+
+RUN R -e "install.packages('isoband', repos='https://cran.rstudio.com/')"
+
+RUN R -e "install.packages('rlang', repos='https://cran.rstudio.com/')"
+
+RUN R -e "install.packages('scales', repos='https://cran.rstudio.com/')"
+
+RUN R -e "install.packages('tibble', repos='https://cran.rstudio.com/')"
+
+RUN R -e "install.packages('withr', repos='https://cran.rstudio.com/')"
+
+RUN R -e "install.packages('https://cran.r-project.org/src/contrib/Archive/ggplot2/ggplot2_3.3.2.tar.gz', repos=NULL, type='source')"
 
 RUN R -e "install.packages('crayon', repos='https://cran.rstudio.com/')"
 
